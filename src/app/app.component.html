@@ -1,3 +1,21 @@
+<h1>{{title}}</h1>
+
+<h1>Welcome to Interceptor!</h1>
 <button (click)="clickAPI()">API</button>
+<button (click)="clear()">Clear</button>
+<br>
+
+<ng-container *ngFor="let item of items">
+  {{item.body}}
+  <hr>
+  <br>
+</ng-container>
+
+<ng-container *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</ng-container>
+ 
 
 <router-outlet></router-outlet>
